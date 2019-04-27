@@ -1954,11 +1954,9 @@ end
 ---                         called.
 function CooperativeScheduler:update(delta)
 	self.currentTime = self.currentTime + (delta or 0)
-
 	local i = 1
 	while i <= #self.tasks do
 		local task = self.tasks[i]
-
 		if self.currentTime >= task.due then
 			local success, delay = coroutine.resume(task.thread)
 

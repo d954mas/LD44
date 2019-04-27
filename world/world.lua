@@ -37,6 +37,7 @@ end
 
 
 function M:update(dt)
+    assert(dt)
     self.unit_controller:update(dt)
 end
 --region units

@@ -24,8 +24,8 @@ function Scene:final(go_self)
     WORLD:reset()
 end
 
-function Scene:on_update(go_self, dt)
-    BaseScene.on_update(self,go_self,dt)
+function Scene:on_update(dt)
+    BaseScene.on_update(self,dt)
     WORLD:update(dt)
 end
 
