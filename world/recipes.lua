@@ -1,4 +1,5 @@
 local COMMON = require "libs.common"
+local LUME = require "libs.lume"
 
 ---@class Recipe
 local Recipe = COMMON.class("Recipe")
@@ -10,6 +11,10 @@ function Recipe:initialize(data)
         assert(type(comp)=="number")
         assert(comp > 0 and comp <= 4)
     end
+end
+
+function Recipe:check(data)
+   return LUME.shallow_equals(data,self.components)
 end
 
 ---@type Recipe[]

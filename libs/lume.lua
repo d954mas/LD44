@@ -202,7 +202,12 @@ function lume.clearp(t)
   end
   return t
 end
-
+function lume.cleari(t)
+  for i=#t,1,-1 do
+    t[i] = nil
+  end
+  return t
+end
 
 function lume.extend(t, ...)
   for i = 1, select("#", ...) do
@@ -802,6 +807,12 @@ function lume.rgba(color)
   local g = math_floor((color /      256) % 256)
   local b = math_floor((color) % 256)
   return r, g, b, a
+end
+
+function lume.shallow_equals(a,b)
+  for k,v in pairs(a)do if v~=b[k] then return false end end
+  for k,v in pairs(b)do if v~=a[k] then return false end end
+  return true
 end
 
 

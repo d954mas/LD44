@@ -16,15 +16,17 @@ end
 
 function Scene:on_show(input)
     COMMON.input_acquire()
-
+    WORLD:reset()
 end
 
 function Scene:final(go_self)
     COMMON.input_release()
+    WORLD:reset()
 end
 
-function Scene:update(go_self, dt)
-    BaseScene.update(self,go_self,dt)
+function Scene:on_update(go_self, dt)
+    BaseScene.on_update(self,go_self,dt)
+    WORLD:update(dt)
 end
 
 function Scene:on_transition(transition)
