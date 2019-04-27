@@ -23,8 +23,8 @@ instances {
   id: "tree"
   prototype: "/scenes/game/tree.go"
   position {
-    x: 183.0
-    y: 285.0
+    x: 300.0
+    y: 560.0
     z: 0.1
   }
   rotation {
@@ -34,8 +34,8 @@ instances {
     w: 1.0
   }
   scale3 {
-    x: 4.0
-    y: 4.0
+    x: 1.0
+    y: 1.0
     z: 1.0
   }
 }

@@ -19,6 +19,9 @@ images {
 images {
   image: "/assets/images/game/grass_4.png"
 }
+images {
+  image: "/assets/images/game/tree.png"
+}
 margin: 0
 extrude_borders: 2
 inner_padding: 0

@@ -4,12 +4,12 @@ local LUME = require "libs.lume"
 
 local Controller = COMMON.class("UnitController")
 local MAX_UNITS = 1
-local START_POS = vmath.vector3(1240,141,0.1)
+local START_POS = vmath.vector3(1240,300,0.1)
 local END_POS = vmath.vector3(100,100,0.1)
-local SCALE = 3
+local SCALE = 1
 local RX = require "libs.rx"
 
-local UNIT_STATES = {APPEARED = "APPEARED",MOVEMENT = "MOVEMENT",WAIT = "WAIT",DISAPPEARED = "DISAPPEARED",DELETED = "DELETED"}
+local UNIT_STATES = {CREATED = "CREATED",APPEARED = "APPEARED",MOVEMENT = "MOVEMENT",WAIT = "WAIT",DISAPPEARED = "DISAPPEARED",DELETED = "DELETED"}
 ---@class Unit
 local Unit = COMMON.class("Unit")
 function Unit:initialize(data)
@@ -21,21 +21,31 @@ function Unit:initialize(data)
     self.scheduler = assert(data.scheduler)
     self.img = data.img
     self.STATES = UNIT_STATES
-    self.state = UNIT_STATES.WAIT
+    self.state = UNIT_STATES.CREATED
 end
 
 function Unit:hide()
     assert(self.state == UNIT_STATES.WAIT)
     self.state = UNIT_STATES.DISAPPEARED
     self.scheduler:schedule(function ()
-        print("DELETED1")
         go.animate(self.view.sprite_item,"tint.w",go.PLAYBACK_ONCE_FORWARD,0,go.EASING_OUTEXPO,1,0)
         go.animate(self.view.sprite,"tint.w",go.PLAYBACK_ONCE_FORWARD,0,go.EASING_OUTEXPO,1,0)
         coroutine.yield(1)
-        print("DELETED")
         go.delete(self.view.url,true)
         self.state = UNIT_STATES.DELETED
-        print("STATE CHANGED")
+    end)
+end
+
+function Unit:appeared()
+    assert(self.state == UNIT_STATES.CREATED)
+    self.state = UNIT_STATES.APPEARED
+    self.scheduler:schedule(function ()
+        go.set(self.view.sprite_item,"tint.w",0)
+        go.set(self.view.sprite,"tint.w",0)
+        go.animate(self.view.sprite_item,"tint.w",go.PLAYBACK_ONCE_FORWARD,1,go.EASING_OUTEXPO,1,0)
+        go.animate(self.view.sprite,"tint.w",go.PLAYBACK_ONCE_FORWARD,1,go.EASING_OUTEXPO,1,0)
+        coroutine.yield(1)
+        self.state = UNIT_STATES.WAIT
     end)
 end
 
@@ -80,10 +90,9 @@ function Controller:update(dt)
     for i=#self.units_disappeared,1,-1 do
         local unit = self.units_disappeared[i]
         unit:update(dt)
-        print(unit.state)
         if unit.state == UNIT_STATES.DELETED then
             table.remove(self.units_disappeared,i)
-            print("deleted")
+            self.world:clear_craft()
         end
     end
     self:update_appear()
@@ -121,6 +130,7 @@ function Controller:create_unit(prev_unit)
     local unit = Unit({x=START_POS.x,y=START_POS.y,item = item,scheduler = self.scheduler})
     local unit_go = factory.create("game:/factories#unit",unit.position,nil,nil,SCALE)
     unit:set_view(msg.url(unit_go))
+    unit:appeared()
     return unit
 
 end

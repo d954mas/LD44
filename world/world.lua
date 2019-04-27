@@ -26,7 +26,7 @@ end
 ---@return Recipe
 function M:get_current_item()
     local unit = self.unit_controller.units[1]
-    return unit and (unit:is_visible() and unit.item)
+    return unit and (unit:is_visible() and unit.state == unit.STATES.WAIT and unit.item )
 end
 
 function M:initialize()
@@ -61,11 +61,18 @@ function M:craft(item_idx)
         local item = self:get_current_item()
         local equals = item:check(self.craft_recipe)
         self:event(equals and EVENTS.CRAFT_SUCCESS,EVENTS.CRAFT_FAILED,{item = item})
-        LUME.cleari(self.craft_recipe)
         if equals then
             self.unit_controller:free_first()
+        else
+            self.unit_controller.scheduler:schedule(function()
+                self:clear_craft()
+            end,0.2)
         end
     end
+end
+
+function M:clear_craft()
+    LUME.cleari(self.craft_recipe)
 end
 
 return M()
