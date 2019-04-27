@@ -1,0 +1,12 @@
+images {
+  image: "/assets/images/icons/icon_help.png"
+}
+images {
+  image: "/assets/images/icons/icon_settings.png"
+}
+images {
+  image: "/assets/images/icons/icon_resources_gold.png"
+}
+margin: 0
+extrude_borders: 2
+inner_padding: 0

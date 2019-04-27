@@ -1,0 +1,18 @@
+images {
+  image: "/assets/images/empty.png"
+}
+images {
+  image: "/assets/images/white.png"
+}
+images {
+  image: "/assets/images/gui/golden_gui/panel.png"
+}
+images {
+  image: "/assets/images/gui/golden_gui/title.png"
+}
+images {
+  image: "/assets/images/gui/golden_gui/title_big.png"
+}
+margin: 0
+extrude_borders: 2
+inner_padding: 0
