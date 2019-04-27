@@ -1,0 +1,67 @@
+local COMMON = require "libs.common"
+local WORLD = require "world.world"
+local SM = require "libs.sm.sm"
+local GUI = require "gooey.themes.my.gooey"
+local RECIPES = require "world.recipes"
+
+local Gui = COMMON.new_n28s()
+
+local function bind_recipes(idx)
+    local id ="recipe_" .. idx
+    ---@class RecipeVH
+    local recipe = {
+        root = gui.get_node( id .."/root"),
+        item_1 = gui.get_node(id .. "/cell_1/item"),
+        item_2 = gui.get_node(id .. "/cell_2/item"),
+        item_3 = gui.get_node(id .. "/cell_3/item"),
+        item_4 = gui.get_node(id .. "/cell_4/item"),
+        result = gui.get_node(id .. "/item"),
+    }
+    return recipe
+end
+
+function Gui:init()
+    COMMON.input_acquire()
+    self.vh = {
+        work = {
+            root = gui.get_node("work"),
+            item_1 = gui.get_node("work/cell_1/item"),
+            item_2 = gui.get_node("work/cell_2/item"),
+            item_3 = gui.get_node("work/cell_3/item"),
+            item_4 = gui.get_node("work/cell_4/item"),
+        },
+        ---@type RecipeVH[]
+        recipes = {}
+    }
+    for i, recipe in ipairs(RECIPES.Recipes) do
+        self.vh.recipes[i] = bind_recipes(i)
+    end
+    self:update_recipes()
+end
+
+function Gui:update_recipes()
+    for i, recipe in ipairs(RECIPES.Recipes) do
+        local vh = self.vh.recipes[i]
+        gui.play_flipbook(vh.result,recipe.result_img)
+        for i=1,4 do
+            gui.play_flipbook(vh["item_" .. i],"grass_" .. recipe.components[i])
+        end
+    end
+end
+
+function Gui:update_current()
+    for i=1,4 do
+        local img = "empty"
+        if WORLD.craft_recipe[i]then
+            img = "grass_" .. WORLD.craft_recipe[i]
+        end
+        gui.play_flipbook(self.vh.work["item_" .. i],img)
+    end
+end
+
+function Gui:update(dt)
+    self:update_current()
+end
+
+
+COMMON.N28S.register(Gui)

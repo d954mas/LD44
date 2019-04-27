@@ -34,6 +34,22 @@ key_trigger {
   input: KEY_R
   action: "reset"
 }
+key_trigger {
+  input: KEY_Q
+  action: "craft_1"
+}
+key_trigger {
+  input: KEY_W
+  action: "craft_2"
+}
+key_trigger {
+  input: KEY_E
+  action: "craft_3"
+}
+key_trigger {
+  input: KEY_R
+  action: "craft_4"
+}
 mouse_trigger {
   input: MOUSE_BUTTON_1
   action: "touch"

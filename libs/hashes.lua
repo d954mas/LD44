@@ -14,6 +14,11 @@ M.INPUT_RIGHT = hash("right")
 M.INPUT_DOWN = hash("down")
 M.INPUT_SPACE = hash("space")
 
+M.INPUT_CRAFT_1 = hash("craft_1")
+M.INPUT_CRAFT_2 = hash("craft_2")
+M.INPUT_CRAFT_3 = hash("craft_3")
+M.INPUT_CRAFT_4 = hash("craft_4")
+
 M.INPUT_TOUCH = hash("touch")
 M.INPUT_RIGHT_CLICK = hash("right_click")
 

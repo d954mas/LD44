@@ -1,0 +1,147 @@
+images {
+  image: "/assets/images/game/mushroom/PNG/bush.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomBrownAltLeft.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomBrownAltMid.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomBrownAltMidAlt.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomBrownAltRight.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomBrownAltSpotsLeft.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomBrownAltSpotsMid.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomBrownAltSpotsMidAlt.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomBrownAltSpotsRight.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomBrownLeft.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomBrownMid.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomBrownMidAlt.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomBrownRight.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomBrownSpotsLeft.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomBrownSpotsMid.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomBrownSpotsMidAlt.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomBrownSpotsRight.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomRedAltLeft.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomRedAltMid.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomRedAltMidAlt.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomRedAltRight.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomRedLeft.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomRedMid.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomRedMidAlt.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomRedRight.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomTanAltLeft.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomTanAltMid.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomTanAltMidAlt.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomTanAltRight.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomTanLeft.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomTanMid.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomTanMidAlt.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/shroomTanRight.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/spritesheet.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/stem.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/stemBase.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/stemBaseAlt.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/stemCrown.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/stemShroom.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/stemTop.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/stemTopAlt.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/stemVine.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/tallShroom_brown.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/tallShroom_red.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/tallShroom_tan.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/tinyShroom_brown.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/tinyShroom_red.png"
+}
+images {
+  image: "/assets/images/game/mushroom/PNG/tinyShroom_tan.png"
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0

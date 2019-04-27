@@ -4,6 +4,21 @@ images {
 images {
   image: "/assets/images/white.png"
 }
+images {
+  image: "/assets/images/game/character_1.png"
+}
+images {
+  image: "/assets/images/game/grass_1.png"
+}
+images {
+  image: "/assets/images/game/grass_2.png"
+}
+images {
+  image: "/assets/images/game/grass_3.png"
+}
+images {
+  image: "/assets/images/game/grass_4.png"
+}
 margin: 0
 extrude_borders: 2
 inner_padding: 0

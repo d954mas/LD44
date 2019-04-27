@@ -1,0 +1,21 @@
+images {
+  image: "/assets/images/reciepts/reciept_1.png"
+}
+images {
+  image: "/assets/images/reciepts/reciept_2.png"
+}
+images {
+  image: "/assets/images/reciepts/reciept_3.png"
+}
+images {
+  image: "/assets/images/reciepts/reciept_4.png"
+}
+images {
+  image: "/assets/images/reciepts/reciept_5.png"
+}
+images {
+  image: "/assets/images/reciepts/reciept_6.png"
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0
