@@ -12,7 +12,7 @@ end
 
 function M:initialize()
 	self.rx = RX.Subject()
-	self.state = STATE
+
 end
 
 

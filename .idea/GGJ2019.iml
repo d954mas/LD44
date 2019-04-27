@@ -10,8 +10,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="api" level="project" />
-    <orderEntry type="library" name="api1" level="project" />
-    <orderEntry type="library" name="api2" level="project" />
+    <orderEntry type="library" name="defold_api1" level="project" />
   </component>
 </module>
