@@ -72,6 +72,7 @@ function M:craft(item_idx)
     if not self:get_current_item() then return end
     assert(item_idx>0 and item_idx<=4)
     table.insert(self.craft_recipe,item_idx)
+   -- if #self.craft_recipe ~= 4 then SOUNDS:play(SOUNDS.sounds.BREATH_IN,0.0) end
     local idx = #self.craft_recipe
     if self.craft_recipe[idx] ~= self:get_current_item().components[idx] then
         self.blocked = true

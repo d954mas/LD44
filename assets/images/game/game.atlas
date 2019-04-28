@@ -5,9 +5,6 @@ images {
   image: "/assets/images/white.png"
 }
 images {
-  image: "/assets/images/game/character_1.png"
-}
-images {
   image: "/assets/images/game/grass_1.png"
 }
 images {
@@ -35,6 +32,19 @@ animations {
   }
   playback: PLAYBACK_LOOP_PINGPONG
   fps: 5
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "character_1"
+  images {
+    image: "/assets/images/character/Frame001.png"
+  }
+  images {
+    image: "/assets/images/character/Frame002.png"
+  }
+  playback: PLAYBACK_LOOP_PINGPONG
+  fps: 2
   flip_horizontal: 0
   flip_vertical: 0
 }

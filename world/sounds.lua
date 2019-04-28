@@ -6,6 +6,7 @@ M.sounds = {
 	SMOKE_OK = msg.url("main:/sounds#smoke_ok"),
 	WRONG = msg.url("main:/sounds#wrong"),
 	TIME_OVER = msg.url("main:/sounds#time_over"),
+	BREATH_IN = msg.url("main:/sounds#breath_in"),
 }
 
 function M:play(url,delay)
