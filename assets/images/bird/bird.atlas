@@ -1,0 +1,22 @@
+images {
+  image: "/assets/images/bird/Frame001.png"
+}
+images {
+  image: "/assets/images/bird/Frame002.png"
+}
+animations {
+  id: "fly"
+  images {
+    image: "/assets/images/bird/Frame001.png"
+  }
+  images {
+    image: "/assets/images/bird/Frame002.png"
+  }
+  playback: PLAYBACK_LOOP_PINGPONG
+  fps: 4
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+margin: 0
+extrude_borders: 0
+inner_padding: 0

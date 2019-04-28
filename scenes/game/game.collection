@@ -39,6 +39,126 @@ instances {
     z: 1.0
   }
 }
+instances {
+  id: "bird"
+  prototype: "/scenes/game/bird.go"
+  position {
+    x: 1089.0
+    y: 833.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "bird1"
+  prototype: "/scenes/game/bird.go"
+  position {
+    x: 1089.0
+    y: 833.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "bird2"
+  prototype: "/scenes/game/bird.go"
+  position {
+    x: 1089.0
+    y: 833.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "bird3"
+  prototype: "/scenes/game/bird.go"
+  position {
+    x: 1089.0
+    y: 833.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "bird4"
+  prototype: "/scenes/game/bird.go"
+  position {
+    x: 1089.0
+    y: 833.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "bird5"
+  prototype: "/scenes/game/bird.go"
+  position {
+    x: 1089.0
+    y: 833.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
 scale_along_z: 0
 embedded_instances {
   id: "bg"
@@ -177,8 +297,8 @@ embedded_instances {
   "}\n"
   ""
   position {
-    x: 0.0
-    y: 0.0
+    x: 10.0
+    y: 40.0
     z: 0.0
   }
   rotation {
@@ -290,6 +410,32 @@ embedded_instances {
     x: 0.0
     y: 0.0
     z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "birds"
+  children: "bird"
+  children: "bird1"
+  children: "bird2"
+  children: "bird3"
+  children: "bird4"
+  children: "bird5"
+  data: ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.2
   }
   rotation {
     x: 0.0
