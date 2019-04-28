@@ -27,7 +27,7 @@ end
 
 
 function Script:update(dt)
-    pprint(go.get_position())
+   
 end
 
 

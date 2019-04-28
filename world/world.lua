@@ -105,6 +105,7 @@ function M:craft(item_idx)
             --SOUNDS:play(SOUNDS.sounds.CORRECT)
             self.score = self.score + 1
             SOUNDS:play(SOUNDS.sounds.SMOKE_OK,0.0)
+            particlefx.play("/particles#money")
         else
             self.blocked = true
             self.unit_controller.scheduler:schedule(function()
