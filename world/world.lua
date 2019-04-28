@@ -24,6 +24,7 @@ function M:reset()
     self.unit_controller = UnitController(self) --reset
     self.current_time = 0
     self.started = false
+    self.score = 0
 end
 
 ---@return Recipe
@@ -36,6 +37,7 @@ function M:initialize()
     self.event_subject = RX.Subject()
     self.unit_controller = UnitController(self)
     self:reset()
+    self.highscore = 0
 end
 
 
@@ -46,6 +48,7 @@ function M:update(dt)
         SOUNDS:play(SOUNDS.sounds.TIME_OVER,0.0)
         self.current_time = 0
         self.started = false
+        self.highscore = math.max(self.highscore ,self.score)
         self:clear_craft()
     end
     self.unit_controller:update(dt)
@@ -85,8 +88,9 @@ function M:craft(item_idx)
 
         if equals then
             self.unit_controller:free_first()
-            if not self.started then self.started = true end
+            if not self.started then self.started = true self.score = 0 end
             --SOUNDS:play(SOUNDS.sounds.CORRECT)
+            self.score = self.score + 1
             SOUNDS:play(SOUNDS.sounds.SMOKE_OK,0.0)
         else
             self.blocked = true

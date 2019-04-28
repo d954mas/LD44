@@ -84,6 +84,8 @@ function Gui:update(dt)
     self:update_current()
     self:update_recipes()
     gui.set_text(gui.get_node("lbl_time"),string.format("%.2f",math.max(0,20-WORLD.current_time)))
+    gui.set_text(gui.get_node("lbl_score"),"Score:" .. WORLD.score)
+    gui.set_text(gui.get_node("lbl_highscore"),"Highscore:" .. WORLD.highscore)
 end
 
 

@@ -9,7 +9,6 @@ M.sounds = {
 }
 
 function M:play(url,delay)
-	print("play")
 	sound.play(url,{delay = delay})
 end
 
