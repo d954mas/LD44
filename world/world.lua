@@ -86,7 +86,19 @@ function M:craft(item_idx)
         local equals = item:check(self.craft_recipe)
         self:event(equals and EVENTS.CRAFT_SUCCESS,EVENTS.CRAFT_FAILED,{item = item})
 
+        local particles = {
+            "/particles#smoke",
+            "/particles#smoke1",
+            "/particles#smoke2",
+            "/particles#smoke3",
+            "/particles#smoke4",
+            "/particles#smoke5",
+        }
         if equals then
+            local count = math.ceil((self.score+1)/3)
+            for i=1,count do
+                particlefx.play(LUME.randomchoice(particles))
+            end
             self.unit_controller:free_first()
             if not self.started then self.started = true self.score = 0 end
             --SOUNDS:play(SOUNDS.sounds.CORRECT)

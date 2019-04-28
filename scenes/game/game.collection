@@ -193,3 +193,113 @@ embedded_instances {
     z: 1.0
   }
 }
+embedded_instances {
+  id: "particles"
+  data: "components {\n"
+  "  id: \"smoke\"\n"
+  "  component: \"/scenes/game/smoke.particlefx\"\n"
+  "  position {\n"
+  "    x: 1075.0\n"
+  "    y: 518.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  "components {\n"
+  "  id: \"smoke1\"\n"
+  "  component: \"/scenes/game/smoke.particlefx\"\n"
+  "  position {\n"
+  "    x: 1075.0\n"
+  "    y: 518.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: -0.087155744\n"
+  "    w: 0.9961947\n"
+  "  }\n"
+  "}\n"
+  "components {\n"
+  "  id: \"smoke2\"\n"
+  "  component: \"/scenes/game/smoke.particlefx\"\n"
+  "  position {\n"
+  "    x: 1075.0\n"
+  "    y: 518.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.087155744\n"
+  "    w: 0.9961947\n"
+  "  }\n"
+  "}\n"
+  "components {\n"
+  "  id: \"smoke3\"\n"
+  "  component: \"/scenes/game/smoke.particlefx\"\n"
+  "  position {\n"
+  "    x: 1075.0\n"
+  "    y: 518.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: -0.17364818\n"
+  "    w: 0.9848077\n"
+  "  }\n"
+  "}\n"
+  "components {\n"
+  "  id: \"smoke4\"\n"
+  "  component: \"/scenes/game/smoke.particlefx\"\n"
+  "  position {\n"
+  "    x: 1075.0\n"
+  "    y: 518.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.17364818\n"
+  "    w: 0.9848077\n"
+  "  }\n"
+  "}\n"
+  "components {\n"
+  "  id: \"smoke5\"\n"
+  "  component: \"/scenes/game/smoke.particlefx\"\n"
+  "  position {\n"
+  "    x: 1075.0\n"
+  "    y: 518.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: -0.21643962\n"
+  "    w: 0.976296\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}

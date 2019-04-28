@@ -112,3 +112,6 @@ archive_location_prefix = archive
 speaker_mode = stereo
 lib_path = .helpeditor/fmod/res
 
+[particle_fx]
+max_particle_count = 4096
+
