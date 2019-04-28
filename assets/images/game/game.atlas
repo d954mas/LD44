@@ -19,8 +19,24 @@ images {
 images {
   image: "/assets/images/game/grass_4.png"
 }
-images {
-  image: "/assets/images/game/tree.png"
+animations {
+  id: "tree"
+  images {
+    image: "/assets/images/tree/Frame001.png"
+  }
+  images {
+    image: "/assets/images/tree/Frame002.png"
+  }
+  images {
+    image: "/assets/images/tree/Frame003.png"
+  }
+  images {
+    image: "/assets/images/tree/Frame004.png"
+  }
+  playback: PLAYBACK_LOOP_PINGPONG
+  fps: 5
+  flip_horizontal: 0
+  flip_vertical: 0
 }
 margin: 0
 extrude_borders: 2

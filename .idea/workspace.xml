@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c62f91f-e262-404b-a264-56f876977135" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/222222.hxl" beforeDir="false" afterPath="$PROJECT_DIR$/assets/222222.hxl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/game/game.collection" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/game/game.collection" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/wip.hxl" beforeDir="false" afterPath="$PROJECT_DIR$/assets/wip.hxl" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/scenes/game/game.gui_script">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="137">
-              <caret line="71" column="16" lean-forward="true" selection-end-line="91" selection-end-column="25" />
+              <caret line="71" column="16" selection-end-line="91" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -207,7 +206,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556468569844" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556468621067" />
     <property name="last_opened_file_path" value="$USER_HOME$/development/Defold/defold_api.zip!/api" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -639,7 +638,7 @@
     <entry file="file://$PROJECT_DIR$/scenes/game/game.gui_script">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
-          <caret line="71" column="16" lean-forward="true" selection-end-line="91" selection-end-column="25" />
+          <caret line="71" column="16" selection-end-line="91" selection-end-column="25" />
         </state>
       </provider>
     </entry>
