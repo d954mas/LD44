@@ -4,6 +4,7 @@ local TAG = "World"
 local RECIPES = require "world.recipes"
 local LUME = require "libs.lume"
 local UnitController = require "world.unit_controller"
+local SOUNDS = require "world.sounds"
 
 local RESET_SAVE = false
 
@@ -42,6 +43,7 @@ function M:update(dt)
     assert(dt)
     if self.started then self.current_time = self.current_time+dt end
     if self.current_time > MAX_TIME then
+        SOUNDS:play(SOUNDS.sounds.TIME_OVER,0.0)
         self.current_time = 0
         self.started = false
         self:clear_craft()
@@ -73,19 +75,24 @@ function M:craft(item_idx)
         self.unit_controller.scheduler:schedule(function()
             self:clear_craft()
             self.blocked = false
+            SOUNDS:play(SOUNDS.sounds.WRONG)
         end,0.2)
     end
     if #self.craft_recipe == 4 then
         local item = self:get_current_item()
         local equals = item:check(self.craft_recipe)
         self:event(equals and EVENTS.CRAFT_SUCCESS,EVENTS.CRAFT_FAILED,{item = item})
+
         if equals then
             self.unit_controller:free_first()
             if not self.started then self.started = true end
+            --SOUNDS:play(SOUNDS.sounds.CORRECT)
+            SOUNDS:play(SOUNDS.sounds.SMOKE_OK,0.0)
         else
             self.blocked = true
             self.unit_controller.scheduler:schedule(function()
                 self:clear_craft()
+                SOUNDS:play(SOUNDS.sounds.WRONG)
                 self.blocked = false
             end,0.2)
         end
