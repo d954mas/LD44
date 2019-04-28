@@ -11,6 +11,10 @@ textures {
   name: "gui"
   texture: "/assets/images/gui/gui.atlas"
 }
+textures {
+  name: "reciepts"
+  texture: "/assets/images/reciepts/reciepts.atlas"
+}
 background_color {
   x: 0.0
   y: 0.0
@@ -19,8 +23,8 @@ background_color {
 }
 nodes {
   position {
-    x: 326.0
-    y: 355.0
+    x: 1001.0
+    y: 748.0
     z: 0.0
     w: 1.0
   }
@@ -37,8 +41,8 @@ nodes {
     w: 1.0
   }
   size {
-    x: 70.0
-    y: 70.0
+    x: 1.0
+    y: 1.0
     z: 0.0
     w: 1.0
   }
@@ -50,12 +54,122 @@ nodes {
   }
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
-  texture: "game/grass_1"
+  texture: "game/empty"
   id: "grass_1"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
+  layer: ""
+  inherit_alpha: true
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
+  alpha: 1.0
+  template_node_child: false
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 0.33
+    y: 0.33
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 225.0
+    y: 369.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_BOX
+  blend_mode: BLEND_MODE_ALPHA
+  texture: "reciepts/reciept_1"
+  id: "grass_1/icon"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "grass_1"
+  layer: ""
+  inherit_alpha: true
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
+  alpha: 0.5
+  template_node_child: false
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 0.33
+    y: 0.33
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 225.0
+    y: 369.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_BOX
+  blend_mode: BLEND_MODE_ALPHA
+  texture: "reciepts/reciept_1"
+  id: "grass_1/icon2"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "grass_1"
   layer: ""
   inherit_alpha: true
   slice9 {
@@ -106,7 +220,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "Q"
   font: "roboto_regular"
-  id: "grass_1_text"
+  id: "grass_1/text"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -136,8 +250,8 @@ nodes {
 }
 nodes {
   position {
-    x: 468.0
-    y: 355.0
+    x: 1143.0
+    y: 748.0
     z: 0.0
     w: 1.0
   }
@@ -191,7 +305,7 @@ nodes {
 nodes {
   position {
     x: 0.0
-    y: 12.0
+    y: 0.0
     z: 0.0
     w: 1.0
   }
@@ -202,14 +316,14 @@ nodes {
     w: 1.0
   }
   scale {
-    x: 1.0
-    y: 1.0
+    x: 0.33
+    y: 0.33
     z: 1.0
     w: 1.0
   }
   size {
-    x: 70.0
-    y: 70.0
+    x: 225.0
+    y: 369.0
     z: 0.0
     w: 1.0
   }
@@ -221,8 +335,63 @@ nodes {
   }
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
-  texture: "game/grass_2"
-  id: "box"
+  texture: "reciepts/reciept_2"
+  id: "grass_2/icon"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "grass_2"
+  layer: ""
+  inherit_alpha: true
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
+  alpha: 0.5
+  template_node_child: false
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 0.33
+    y: 0.33
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 225.0
+    y: 369.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_BOX
+  blend_mode: BLEND_MODE_ALPHA
+  texture: "reciepts/reciept_2"
+  id: "grass_2/icon2"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -278,7 +447,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "W"
   font: "roboto_regular"
-  id: "grass_1_text1"
+  id: "grass_2/text"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -308,8 +477,8 @@ nodes {
 }
 nodes {
   position {
-    x: 614.0
-    y: 355.0
+    x: 1289.0
+    y: 748.0
     z: 0.0
     w: 1.0
   }
@@ -326,8 +495,8 @@ nodes {
     w: 1.0
   }
   size {
-    x: 70.0
-    y: 70.0
+    x: 1.0
+    y: 1.0
     z: 0.0
     w: 1.0
   }
@@ -339,12 +508,122 @@ nodes {
   }
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
-  texture: "game/grass_3"
+  texture: "gui/empty"
   id: "grass_3"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
+  layer: ""
+  inherit_alpha: true
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
+  alpha: 1.0
+  template_node_child: false
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 0.33
+    y: 0.33
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 225.0
+    y: 369.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_BOX
+  blend_mode: BLEND_MODE_ALPHA
+  texture: "reciepts/reciept_3"
+  id: "grass_3/icon"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "grass_3"
+  layer: ""
+  inherit_alpha: true
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
+  alpha: 0.5
+  template_node_child: false
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 0.33
+    y: 0.33
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 225.0
+    y: 369.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_BOX
+  blend_mode: BLEND_MODE_ALPHA
+  texture: "reciepts/reciept_3"
+  id: "grass_3/icon2"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "grass_3"
   layer: ""
   inherit_alpha: true
   slice9 {
@@ -395,7 +674,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "E"
   font: "roboto_regular"
-  id: "grass_1_text2"
+  id: "grass_3/text"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -425,8 +704,8 @@ nodes {
 }
 nodes {
   position {
-    x: 756.0
-    y: 355.0
+    x: 1431.0
+    y: 748.0
     z: 0.0
     w: 1.0
   }
@@ -443,8 +722,8 @@ nodes {
     w: 1.0
   }
   size {
-    x: 70.0
-    y: 70.0
+    x: 1.0
+    y: 1.0
     z: 0.0
     w: 1.0
   }
@@ -456,12 +735,122 @@ nodes {
   }
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
-  texture: "game/grass_4"
+  texture: "gui/empty"
   id: "grass_4"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
   adjust_mode: ADJUST_MODE_FIT
+  layer: ""
+  inherit_alpha: true
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
+  alpha: 1.0
+  template_node_child: false
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 0.33
+    y: 0.33
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 225.0
+    y: 369.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_BOX
+  blend_mode: BLEND_MODE_ALPHA
+  texture: "reciepts/reciept_4"
+  id: "grass_4/icon"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "grass_4"
+  layer: ""
+  inherit_alpha: true
+  slice9 {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 0.0
+  }
+  clipping_mode: CLIPPING_MODE_NONE
+  clipping_visible: true
+  clipping_inverted: false
+  alpha: 0.5
+  template_node_child: false
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 0.33
+    y: 0.33
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 225.0
+    y: 369.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_BOX
+  blend_mode: BLEND_MODE_ALPHA
+  texture: "reciepts/reciept_4"
+  id: "grass_4/icon2"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  adjust_mode: ADJUST_MODE_FIT
+  parent: "grass_4"
   layer: ""
   inherit_alpha: true
   slice9 {
@@ -512,7 +901,7 @@ nodes {
   blend_mode: BLEND_MODE_ALPHA
   text: "R"
   font: "roboto_regular"
-  id: "grass_1_text3"
+  id: "grass_4/text"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
   pivot: PIVOT_CENTER
@@ -542,8 +931,8 @@ nodes {
 }
 nodes {
   position {
-    x: 502.0
-    y: 142.0
+    x: 610.0
+    y: 1307.0
     z: 0.0
     w: 1.0
   }
@@ -620,14 +1009,14 @@ nodes {
     w: 1.0
   }
   color {
-    x: 1.0
-    y: 1.0
-    z: 1.0
+    x: 0.5019608
+    y: 0.5019608
+    z: 0.5019608
     w: 1.0
   }
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
-  texture: "gui/title"
+  texture: "gui/white"
   id: "work/bg"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -647,7 +1036,7 @@ nodes {
   clipping_inverted: false
   alpha: 1.0
   template_node_child: false
-  size_mode: SIZE_MODE_AUTO
+  size_mode: SIZE_MODE_MANUAL
 }
 nodes {
   position {
@@ -669,8 +1058,8 @@ nodes {
     w: 1.0
   }
   size {
-    x: 96.0
-    y: 64.0
+    x: 1.0
+    y: 1.0
     z: 0.0
     w: 1.0
   }
@@ -682,7 +1071,7 @@ nodes {
   }
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
-  texture: "gui/title_big"
+  texture: "reciepts/empty"
   id: "work/cell_1"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -718,14 +1107,14 @@ nodes {
     w: 1.0
   }
   scale {
-    x: 1.0
-    y: 1.0
+    x: 0.33
+    y: 0.33
     z: 1.0
     w: 1.0
   }
   size {
-    x: 70.0
-    y: 70.0
+    x: 225.0
+    y: 369.0
     z: 0.0
     w: 1.0
   }
@@ -737,7 +1126,7 @@ nodes {
   }
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
-  texture: "game/grass_1"
+  texture: "reciepts/reciept_1"
   id: "work/cell_1/item"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -779,8 +1168,8 @@ nodes {
     w: 1.0
   }
   size {
-    x: 96.0
-    y: 64.0
+    x: 1.0
+    y: 1.0
     z: 0.0
     w: 1.0
   }
@@ -792,7 +1181,7 @@ nodes {
   }
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
-  texture: "gui/title_big"
+  texture: "gui/empty"
   id: "work/cell_2"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -828,14 +1217,14 @@ nodes {
     w: 1.0
   }
   scale {
-    x: 1.0
-    y: 1.0
+    x: 0.33
+    y: 0.33
     z: 1.0
     w: 1.0
   }
   size {
-    x: 70.0
-    y: 70.0
+    x: 225.0
+    y: 369.0
     z: 0.0
     w: 1.0
   }
@@ -847,7 +1236,7 @@ nodes {
   }
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
-  texture: "game/grass_2"
+  texture: "reciepts/reciept_1"
   id: "work/cell_2/item"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -889,8 +1278,8 @@ nodes {
     w: 1.0
   }
   size {
-    x: 96.0
-    y: 64.0
+    x: 1.0
+    y: 1.0
     z: 0.0
     w: 1.0
   }
@@ -902,7 +1291,7 @@ nodes {
   }
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
-  texture: "gui/title_big"
+  texture: "gui/empty"
   id: "work/cell_3"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -938,14 +1327,14 @@ nodes {
     w: 1.0
   }
   scale {
-    x: 1.0
-    y: 1.0
+    x: 0.33
+    y: 0.33
     z: 1.0
     w: 1.0
   }
   size {
-    x: 70.0
-    y: 70.0
+    x: 225.0
+    y: 369.0
     z: 0.0
     w: 1.0
   }
@@ -957,7 +1346,7 @@ nodes {
   }
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
-  texture: "game/grass_3"
+  texture: "reciepts/reciept_3"
   id: "work/cell_3/item"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -999,8 +1388,8 @@ nodes {
     w: 1.0
   }
   size {
-    x: 96.0
-    y: 64.0
+    x: 1.0
+    y: 1.0
     z: 0.0
     w: 1.0
   }
@@ -1012,7 +1401,7 @@ nodes {
   }
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
-  texture: "gui/title_big"
+  texture: "gui/empty"
   id: "work/cell_4"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -1048,14 +1437,14 @@ nodes {
     w: 1.0
   }
   scale {
-    x: 1.0
-    y: 1.0
+    x: 0.33
+    y: 0.33
     z: 1.0
     w: 1.0
   }
   size {
-    x: 70.0
-    y: 70.0
+    x: 225.0
+    y: 369.0
     z: 0.0
     w: 1.0
   }
@@ -1067,7 +1456,7 @@ nodes {
   }
   type: TYPE_BOX
   blend_mode: BLEND_MODE_ALPHA
-  texture: "game/grass_4"
+  texture: "reciepts/reciept_3"
   id: "work/cell_4/item"
   xanchor: XANCHOR_NONE
   yanchor: YANCHOR_NONE
@@ -1091,8 +1480,8 @@ nodes {
 }
 nodes {
   position {
-    x: 559.0
-    y: 336.0
+    x: 622.0
+    y: 1019.0
     z: 0.0
     w: 1.0
   }
@@ -1753,8 +2142,8 @@ nodes {
     w: 1.0
   }
   size {
-    x: 168.0
-    y: 327.0
+    x: 225.0
+    y: 369.0
     z: 0.0
     w: 1.0
   }
@@ -2398,8 +2787,8 @@ nodes {
     w: 1.0
   }
   size {
-    x: 168.0
-    y: 327.0
+    x: 225.0
+    y: 369.0
     z: 0.0
     w: 1.0
   }
@@ -3043,8 +3432,8 @@ nodes {
     w: 1.0
   }
   size {
-    x: 168.0
-    y: 327.0
+    x: 225.0
+    y: 369.0
     z: 0.0
     w: 1.0
   }
@@ -3688,8 +4077,8 @@ nodes {
     w: 1.0
   }
   size {
-    x: 168.0
-    y: 327.0
+    x: 225.0
+    y: 369.0
     z: 0.0
     w: 1.0
   }
@@ -4333,8 +4722,8 @@ nodes {
     w: 1.0
   }
   size {
-    x: 168.0
-    y: 327.0
+    x: 225.0
+    y: 369.0
     z: 0.0
     w: 1.0
   }
@@ -4978,8 +5367,8 @@ nodes {
     w: 1.0
   }
   size {
-    x: 168.0
-    y: 327.0
+    x: 225.0
+    y: 369.0
     z: 0.0
     w: 1.0
   }
@@ -5012,6 +5401,68 @@ nodes {
   alpha: 1.0
   template_node_child: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 835.0
+    y: 942.0
+    z: 0.0
+    w: 1.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+    z: 1.0
+    w: 1.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+    z: 0.0
+    w: 1.0
+  }
+  color {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  type: TYPE_TEXT
+  blend_mode: BLEND_MODE_ALPHA
+  text: "29.00"
+  font: "roboto_regular"
+  id: "lbl_time"
+  xanchor: XANCHOR_NONE
+  yanchor: YANCHOR_NONE
+  pivot: PIVOT_CENTER
+  outline {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  shadow {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+    w: 1.0
+  }
+  adjust_mode: ADJUST_MODE_FIT
+  line_break: false
+  layer: ""
+  inherit_alpha: true
+  alpha: 1.0
+  outline_alpha: 0.72
+  shadow_alpha: 1.0
+  template_node_child: false
+  text_leading: 1.0
+  text_tracking: 0.0
 }
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT

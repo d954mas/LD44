@@ -25,10 +25,18 @@ function Gui:init()
     self.vh = {
         work = {
             root = gui.get_node("work"),
-            item_1 = gui.get_node("work/cell_1/item"),
-            item_2 = gui.get_node("work/cell_2/item"),
-            item_3 = gui.get_node("work/cell_3/item"),
-            item_4 = gui.get_node("work/cell_4/item"),
+            item_1 = gui.get_node("grass_1/icon2"),
+            item_2 = gui.get_node("grass_2/icon2"),
+            item_3 = gui.get_node("grass_3/icon2"),
+            item_4 = gui.get_node("grass_4/icon2"),
+            recipe_item_1 =assert(gui.get_node("grass_1/icon")),
+            recipe_item_2 = gui.get_node("grass_2/icon"),
+            recipe_item_3 = gui.get_node("grass_3/icon"),
+            recipe_item_4 = gui.get_node("grass_4/icon"),
+            recipe_item_lbl_1 =assert(gui.get_node("grass_1/text")),
+            recipe_item_lbl_2 = gui.get_node("grass_2/text"),
+            recipe_item_lbl_3 = gui.get_node("grass_3/text"),
+            recipe_item_lbl_4 = gui.get_node("grass_4/text"),
         },
         ---@type RecipeVH[]
         recipes = {}
@@ -40,27 +48,42 @@ function Gui:init()
 end
 
 function Gui:update_recipes()
-    for i, recipe in ipairs(RECIPES.Recipes) do
-        local vh = self.vh.recipes[i]
-        gui.play_flipbook(vh.result,recipe.result_img)
+    --for i, recipe in ipairs(RECIPES.Recipes) do
+      -- gui.play_flipbook(vh.result,recipe.result_img)
+    local item = WORLD:get_current_item()
         for i=1,4 do
-            gui.play_flipbook(vh["item_" .. i],"grass_" .. recipe.components[i])
+          --  gui.play_flipbook(self.vh.work["recipe_item_" .. i],"reciept_" .. recipe.components[i])
+        --   gui.play_flipbook(vh["item_" .. i],"grass_" .. recipe.components[i])
+
+            if item then
+                gui.play_flipbook(self.vh.work["recipe_item_" .. i],"reciept_" ..item.components[i] )
+                local map = {"Q","W","E","R"}
+                gui.set_text(self.vh.work["recipe_item_lbl_" .. i],map[item.components[i]] )
+            else
+                gui.play_flipbook(self.vh.work["recipe_item_" .. i],"empty")
+                gui.set_text(self.vh.work["recipe_item_lbl_" .. i],"" )
+            end
+
         end
-    end
+    --end
 end
 
 function Gui:update_current()
     for i=1,4 do
         local img = "empty"
         if WORLD.craft_recipe[i]then
-            img = "grass_" .. WORLD.craft_recipe[i]
+            img = "reciept_" .. WORLD.craft_recipe[i]
         end
         gui.play_flipbook(self.vh.work["item_" .. i],img)
+        
+  
     end
 end
 
 function Gui:update(dt)
     self:update_current()
+    self:update_recipes()
+    gui.set_text(gui.get_node("lbl_time"),string.format("%.2f",math.max(0,20-WORLD.current_time)))
 end
 
 

@@ -28,9 +28,13 @@ function Unit:hide()
     assert(self.state == UNIT_STATES.WAIT)
     self.state = UNIT_STATES.DISAPPEARED
     self.scheduler:schedule(function ()
-        go.animate(self.view.sprite_item,"tint.w",go.PLAYBACK_ONCE_FORWARD,0,go.EASING_OUTEXPO,1,0)
+        for i=1,4 do
+            local url = self.view["sprite_item_" .. i]
+            go.set(url,"tint.w",0)
+            go.animate(url,"tint.w",go.PLAYBACK_ONCE_FORWARD,0,go.EASING_OUTEXPO,1,0)
+        end
         go.animate(self.view.sprite,"tint.w",go.PLAYBACK_ONCE_FORWARD,0,go.EASING_OUTEXPO,1,0)
-        coroutine.yield(1)
+        coroutine.yield(0.33)
         go.delete(self.view.url,true)
         self.state = UNIT_STATES.DELETED
     end)
@@ -40,11 +44,14 @@ function Unit:appeared()
     assert(self.state == UNIT_STATES.CREATED)
     self.state = UNIT_STATES.APPEARED
     self.scheduler:schedule(function ()
-        go.set(self.view.sprite_item,"tint.w",0)
+        for i=1,4 do
+            local url = self.view["sprite_item_" .. i]
+            go.set(url,"tint.w",0)
+            go.animate(url,"tint.w",go.PLAYBACK_ONCE_FORWARD,1,go.EASING_OUTEXPO,1,0)
+        end
         go.set(self.view.sprite,"tint.w",0)
-        go.animate(self.view.sprite_item,"tint.w",go.PLAYBACK_ONCE_FORWARD,1,go.EASING_OUTEXPO,1,0)
         go.animate(self.view.sprite,"tint.w",go.PLAYBACK_ONCE_FORWARD,1,go.EASING_OUTEXPO,1,0)
-        coroutine.yield(1)
+        coroutine.yield(0.0)
         self.state = UNIT_STATES.WAIT
     end)
 end
@@ -60,15 +67,26 @@ end
 function Unit:set_view(url)
     self.view = {
         url = url,
-        sprite_item = msg.url(url.socket,url.path,"sprite_item"),
+        --sprite_item = msg.url(url.socket,url.path,"sprite_item"),
+        sprite_item_1 = msg.url(url.socket,url.path,"sprite_item_1"),
+        sprite_item_2 = msg.url(url.socket,url.path,"sprite_item_2"),
+        sprite_item_3 = msg.url(url.socket,url.path,"sprite_item_3"),
+        sprite_item_4 = msg.url(url.socket,url.path,"sprite_item_4"),
         sprite = msg.url(url.socket,url.path,"sprite")
     }
+    for i=1,4 do
+        local url = self.view["sprite_item_" .. i]
+        go.set(url,"scale",vmath.vector3(0.7))
+    end
     self:view_update()
 end
 
 function Unit:view_update()
     assert(self.view)
-    sprite.play_flipbook(self.view.sprite_item,self.item.result_img)
+    sprite.play_flipbook(self.view.sprite_item_1,"reciept_" .. self.item.components[1])
+    sprite.play_flipbook(self.view.sprite_item_2,"reciept_" .. self.item.components[2])
+    sprite.play_flipbook(self.view.sprite_item_3,"reciept_" .. self.item.components[3])
+    sprite.play_flipbook(self.view.sprite_item_4,"reciept_" .. self.item.components[4])
 end
 
 

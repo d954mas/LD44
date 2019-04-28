@@ -19,7 +19,7 @@ embedded_components {
   }
 }
 embedded_components {
-  id: "sprite_item"
+  id: "sprite_item_1"
   type: "sprite"
   data: "tile_set: \"/assets/images/reciepts/reciepts.atlas\"\n"
   "default_animation: \"reciept_6\"\n"
@@ -27,8 +27,68 @@ embedded_components {
   "blend_mode: BLEND_MODE_ALPHA\n"
   ""
   position {
-    x: -286.0
-    y: 174.0
+    x: -94.0
+    y: -1560.0
+    z: 0.1
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+}
+embedded_components {
+  id: "sprite_item_2"
+  type: "sprite"
+  data: "tile_set: \"/assets/images/reciepts/reciepts.atlas\"\n"
+  "default_animation: \"reciept_6\"\n"
+  "material: \"/builtins/materials/sprite.material\"\n"
+  "blend_mode: BLEND_MODE_ALPHA\n"
+  ""
+  position {
+    x: 66.0
+    y: -1560.0
+    z: 0.1
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+}
+embedded_components {
+  id: "sprite_item_3"
+  type: "sprite"
+  data: "tile_set: \"/assets/images/reciepts/reciepts.atlas\"\n"
+  "default_animation: \"reciept_6\"\n"
+  "material: \"/builtins/materials/sprite.material\"\n"
+  "blend_mode: BLEND_MODE_ALPHA\n"
+  ""
+  position {
+    x: 226.0
+    y: -1560.0
+    z: 0.1
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+}
+embedded_components {
+  id: "sprite_item_4"
+  type: "sprite"
+  data: "tile_set: \"/assets/images/reciepts/reciepts.atlas\"\n"
+  "default_animation: \"reciept_6\"\n"
+  "material: \"/builtins/materials/sprite.material\"\n"
+  "blend_mode: BLEND_MODE_ALPHA\n"
+  ""
+  position {
+    x: 386.0
+    y: -1560.0
     z: 0.1
   }
   rotation {

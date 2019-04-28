@@ -14,13 +14,15 @@ local EVENTS = {
 }
 
 
-
+local MAX_TIME = 20
 ---@class World
 local M = COMMON.class("World")
 
 function M:reset()
     self.craft_recipe = {}
     self.unit_controller = UnitController(self) --reset
+    self.current_time = 0
+    self.started = false
 end
 
 ---@return Recipe
@@ -38,6 +40,12 @@ end
 
 function M:update(dt)
     assert(dt)
+    if self.started then self.current_time = self.current_time+dt end
+    if self.current_time > MAX_TIME then
+        self.current_time = 0
+        self.started = false
+        self:clear_craft()
+    end
     self.unit_controller:update(dt)
 end
 --region units
@@ -54,24 +62,41 @@ end
 
 function M:craft(item_idx)
     --can't craft if no requests
+    if self.blocked then return end
+    if self.current_time > MAX_TIME then return end
     if not self:get_current_item() then return end
     assert(item_idx>0 and item_idx<=4)
     table.insert(self.craft_recipe,item_idx)
+    local idx = #self.craft_recipe
+    if self.craft_recipe[idx] ~= self:get_current_item().components[idx] then
+        self.blocked = true
+        self.unit_controller.scheduler:schedule(function()
+            self:clear_craft()
+            self.blocked = false
+        end,0.2)
+    end
     if #self.craft_recipe == 4 then
         local item = self:get_current_item()
         local equals = item:check(self.craft_recipe)
         self:event(equals and EVENTS.CRAFT_SUCCESS,EVENTS.CRAFT_FAILED,{item = item})
         if equals then
             self.unit_controller:free_first()
+            if not self.started then self.started = true end
         else
+            self.blocked = true
             self.unit_controller.scheduler:schedule(function()
                 self:clear_craft()
+                self.blocked = false
             end,0.2)
         end
     end
 end
 
 function M:clear_craft()
+    LUME.cleari(self.craft_recipe)
+end
+
+function M:unit_added()
     LUME.cleari(self.craft_recipe)
 end
 
