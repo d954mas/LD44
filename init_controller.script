@@ -24,6 +24,7 @@ function init(self)
     --endregion
     SM:register(reg_scenes)
     SM:show("GameScene")
+    sound.play("/sounds#music")
 end
 
 function update(self, dt)

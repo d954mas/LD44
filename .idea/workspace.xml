@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c62f91f-e262-404b-a264-56f876977135" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenes/game/game.collection" beforeDir="false" afterPath="$PROJECT_DIR$/scenes/game/game.collection" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/world/world.lua" beforeDir="false" afterPath="$PROJECT_DIR$/world/world.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/init.collection" beforeDir="false" afterPath="$PROJECT_DIR$/init.collection" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/init_controller.script" beforeDir="false" afterPath="$PROJECT_DIR$/init_controller.script" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,12 +26,21 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/world/world.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="97" column="37" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
+            <state relative-caret-position="318">
+              <caret line="125" column="10" selection-start-line="125" selection-start-column="10" selection-end-line="125" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/init_controller.script">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -137,13 +145,13 @@
         <option value="$PROJECT_DIR$/libs/hashes.lua" />
         <option value="$PROJECT_DIR$/world/recipes.lua" />
         <option value="$PROJECT_DIR$/libs/lume.lua" />
-        <option value="$PROJECT_DIR$/init_controller.script" />
         <option value="$PROJECT_DIR$/libs/rx.lua" />
         <option value="$PROJECT_DIR$/scenes/game/game_scene.lua" />
         <option value="$PROJECT_DIR$/world/unit_controller.lua" />
         <option value="$PROJECT_DIR$/world/sounds.lua" />
         <option value="$PROJECT_DIR$/scenes/game/game.gui_script" />
         <option value="$PROJECT_DIR$/world/world.lua" />
+        <option value="$PROJECT_DIR$/init_controller.script" />
       </list>
     </option>
   </component>
@@ -159,7 +167,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -176,6 +183,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -276,10 +284,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1934" height="1054" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3599574" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.359375" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -295,7 +303,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32908458" />
       <window_info anchor="bottom" id="LuaCheck" order="7" weight="0.32785088" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.34764397" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.34640524" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.25653595" />
@@ -570,13 +578,6 @@
     <entry file="jar://$PROJECT_DIR$/../defold_api.zip!/api/message.lua" />
     <entry file="jar://$PROJECT_DIR$/../defold_api.zip!/api/base.lua" />
     <entry file="jar://$APPLICATION_PLUGINS_DIR$/EmmyLua/lib/EmmyLua-1.2.6-IDEA182.jar!/std/Lua51/coroutine.lua" />
-    <entry file="file://$PROJECT_DIR$/init_controller.script">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scenes/game/game_scene.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -594,20 +595,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/development/Defold/defold_api.zip!/api/message.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/development/Defold/defold_api.zip!/api/sound.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="89" column="15" selection-start-line="89" selection-start-column="15" selection-end-line="89" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$USER_HOME$/development/Defold/defold_api.zip!/api/message.lua" />
+    <entry file="jar://$USER_HOME$/development/Defold/defold_api.zip!/api/sound.lua" />
     <entry file="file://$PROJECT_DIR$/world/unit_controller.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -615,13 +604,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/world/sounds.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="2" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/world/sounds.lua" />
     <entry file="file://$PROJECT_DIR$/scenes/game/game.gui_script">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="409">
@@ -629,17 +612,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/development/Defold/defold_api.zip!/api/particle_effects.lua">
+    <entry file="jar://$USER_HOME$/development/Defold/defold_api.zip!/api/particle_effects.lua" />
+    <entry file="file://$PROJECT_DIR$/world/world.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        <state relative-caret-position="318">
+          <caret line="125" column="10" selection-start-line="125" selection-start-column="10" selection-end-line="125" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/world/world.lua">
+    <entry file="file://$PROJECT_DIR$/init_controller.script">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="97" column="37" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
+        <state relative-caret-position="273">
+          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
         </state>
       </provider>
     </entry>
